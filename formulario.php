@@ -21,5 +21,12 @@
         <br>
     </form>
 
+    <?php
+        if (isset($_POST['nomesobrenome'])){
+            echo  $_POST['nome']. "<br>";
+            echo  $_POST['sobrenome']. "<br>";
+        }
+    ?>
+
 </body>
 </html>
