@@ -34,6 +34,28 @@ if (false){
 }
 
 
+echo "<br>";
+echo "<br>";
+
+$idade = 15;
+if ($idade < 18){
+    echo "Menor de idade = $idade anos<br>"; 
+} elseif ($idade <= 65){
+    echo "Adulto = $idade anos<br>";
+} else {
+    echo "Terceira idade = $idade anos<br>";
+}
+
+echo "<br>";
+
+$produto_em_estoque = false;
+
+if (!$produto_em_estoque){
+    echo "Produto em falta no estoque<br>";
+} else {
+    echo "Produto em estoque<br>";
+}
+
 
 
 ?>
