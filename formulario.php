@@ -21,10 +21,141 @@
         <br>
     </form>
 
+    <br>
+    <br>
+
+    <form action="#" method="post">
+        <div>
+            <label for="numero1"> Numero 1:</label>
+            <input type="text" name="numero1" value="">
+        </div>
+        <div>
+            <label for="numero2"> Numero 2:</label>
+            <input type="text" name="numero2" value="">
+        </div>
+        <br>
+        <button type="submit" name="numeros">Executar</button>
+        <br>
+    </form>
+    
     <?php
         if (isset($_POST['nomesobrenome'])){
             echo  $_POST['nome']. "<br>";
             echo  $_POST['sobrenome']. "<br>";
+        }  
+    ?>
+
+    <?php
+        if (isset($_POST['numeros'])){
+           echo $_POST['numero1'] . "<br>";
+           echo $_POST['numero2'] . "<br>";
+           echo $_POST['numero1'] + $_POST['numero2'];
+        }
+
+    ?>
+
+    <form action = "#" method = "post">
+        <div>
+            <label for="t1">Nota maior igual a 6:</label>
+            <select name="t1" id="t1">
+                <option value ="S">SIM</option>
+                <option value ="N" selected>NÃO</option>
+            </select>
+        </div>    
+        <div>
+            <label for="t2">Frequencia Maior que 75%:</label>
+            <select name="t2" id="t2">
+                <option value ="S">SIM</option>
+                <option value ="N" selected>NÃO</option>
+            </select>
+        </div> 
+        <br>
+        <button type="submit" name="media">Executar</button>
+        <br> 
+    </form>
+    
+    <?php
+        if (isset($_POST['media'])){
+           echo $_POST['t1'] . "<br>";
+           echo $_POST['t2'] . "<br>";
+        }
+
+    ?>
+
+
+<form action ="#" method= "post">
+    <div>
+        <label>Selecion suas cores favoritas:</label><br>
+        <input type="checkbox" name="cores1" value="Vermelho">Vermelho<br>
+        <input type="checkbox" name="cores2" value="Verde">Verde<br>
+        <input type="checkbox" name="cores3" value="Azul">Azul<br>
+    </div>
+    <br>
+    <button type="submit" name="cores">Executar</button>
+ </form>
+ 
+        <?php
+        if (isset($_POST['cores'])){
+            if (isset($_POST['cores1'])){
+                echo $_POST['cores1'] . "<br>";
+            }
+            if (isset($_POST['cores2'])){
+                echo $_POST['cores2'] . "<br>";
+            }
+            if (isset($_POST['cores3'])){
+                echo $_POST['cores3'] . "<br>";
+            }
+        }
+        ?>
+    <br>
+    <form action ="#" method="post">
+        <div>
+            <label>Selecione seu gênero:</label><br>
+            <input type="radio" name="genero" value="Masculino">Masculino<br>
+            <input type="radio" name="genero" value="Feminino">Feminino
+        </div>
+        <br>
+        <button type="submit" name="escolhagenero">Executar</button>   
+     </form>
+     
+
+     
+        <?php
+            if (isset($_POST['escolhagenero'])){
+                if (isset($_POST['genero'])){
+                    echo $_POST['genero'] . "<br>";
+                }
+            }
+            ?>
+       
+       <br>
+           <form action = "#" method = "post">
+        <div>
+            <label for="t1">Nota maior igual a 6:</label>
+            <select name="t1" id="t1">
+                <option value ="S">SIM</option>
+                <option value ="N" selected>NÃO</option>
+            </select>
+        </div>    
+        <div>
+            <label for="t2">Frequencia Maior que 75%:</label>
+            <select name="t2" id="t2">
+                <option value ="S">SIM</option>
+                <option value ="N" selected>NÃO</option>
+            </select>
+        </div> 
+        <br>
+        <button type="submit" name="media">Executar</button>
+        <br> 
+    </form>
+    
+    <?php
+        if (isset($_POST['media'])){
+           if ($_POST['t1'] == "S" && $_POST['t2'] == "S"){
+            echo "aluno aprovado";
+           }
+            
+           
         }
     ?>
 

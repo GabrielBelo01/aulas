@@ -55,7 +55,35 @@ if (!$produto_em_estoque){
 } else {
     echo "Produto em estoque<br>";
 }
+echo "<br>";
+echo "<br>";
+//equação de segundo grau
 
+$a = 2;
+$b = 2;
+$c = 2;
 
+$delta =  $b**2 - 4 *$a*$c;
+echo "Delta " .  $delta;
+echo "<br>";
+
+$x1 = (-$b + sqrt($delta)) / (2*$a);
+$x2 = (-$b - sqrt($delta)) / (2*$a);
+
+if ($delta < 0){
+    echo "Não existe raiz real";
+} elseif ( $delta == 0){
+    echo "As duas raizes são iguais";
+    echo "<br>";
+    echo $x1;
+    echo "<br>";
+    echo $x2;
+} else {
+    echo "duas raizes são difentes";
+    echo "<br>";
+    echo $x1;
+    echo "<br>";
+    echo $x2;
+}
 
 ?>
